@@ -1,0 +1,56 @@
+.note{
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    border-radius: 0px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: cursive;
+    margin: 5px;
+}
+
+.note.selected{
+    /* background-color: #ffff00d9; */
+    background-color: #673ab7
+}
+
+.note-title{
+       text-align: left;
+    width: 100%;
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.note-detail{
+    text-align: left;
+    width: 100%;
+    display: flex;
+    margin: 10px 0;
+}
+
+.note-date{
+    flex: 1;
+    font-size: 14px;
+    opacity: 0.7;
+    min-width: 65px;
+    font-family: monospace;
+    align-self: flex-end;
+
+}
+
+.note-body{
+    flex: 3;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: smaller;
+
+}

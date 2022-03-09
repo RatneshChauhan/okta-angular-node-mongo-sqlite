@@ -1,0 +1,45 @@
+.list-container{
+    background-color: #c8c8c8e3;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 300px;
+    height: calc( 85vh - 55px );
+    min-width: 250px;
+
+}
+.add-new-note-btn{
+  background-color: rgb(3, 13, 14);
+  color: #fff;
+  padding: 15px;
+  border: none;
+  box-shadow: 0 3px 3px #ccc;
+  margin: 5px;
+  width: 90%;
+  cursor: pointer;
+}
+
+@media( max-width: 760px ){
+    .list-container{
+        background-color: #c8c8c8e3;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+        max-width: 200px;
+        height: calc( 100vh - 55px );
+        min-width: auto;        
+    }    
+}
+
+@media( max-width: 480px ){
+    .list-container{
+        background-color: #c8c8c8e3;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+        max-width: 200px;
+        height: calc( 100vh - 55px );
+        min-width: auto;
+        
+    }    
+}

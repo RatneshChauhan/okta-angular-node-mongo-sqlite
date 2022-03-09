@@ -1,0 +1,33 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
+import { NotesComponent } from './notes/notes.component';
+import { HomeComponent } from './home/home.component';
+import { OktaCallbackComponent, OktaAuthGuard } from '@okta/okta-angular';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
+    canActivate: [OktaAuthGuard]
+  },
+  {
+    path: 'notes',
+    component: NotesComponent,
+    canActivate: [OktaAuthGuard]
+  },
+  {
+    path: 'callback',
+    component: OktaCallbackComponent
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

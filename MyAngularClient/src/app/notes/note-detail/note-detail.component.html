@@ -1,0 +1,11 @@
+<div class="NgxEditor__Wrapper">
+  <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
+  <ngx-editor
+    [editor]="editor"
+    [(ngModel)]="html"
+    [disabled]="false"
+    [placeholder]="'New note...'"
+    #editorTextarea
+  ></ngx-editor>
+</div>
+

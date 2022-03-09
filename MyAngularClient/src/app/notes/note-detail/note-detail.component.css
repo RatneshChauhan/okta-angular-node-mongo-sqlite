@@ -1,0 +1,5 @@
+.NgxEditor__Wrapper{
+    overflow-y: auto !important ;
+    max-height: 556px !important;
+    height: 556px !important;
+}

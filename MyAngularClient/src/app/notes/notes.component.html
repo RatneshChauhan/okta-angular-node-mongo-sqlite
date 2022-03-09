@@ -1,0 +1,12 @@
+<h1 class="h1">
+
+  Notes</h1>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
+  <div class="app-container">
+    <app-header></app-header>
+    <div class="main-container">
+      <app-notes-list *ngIf="!hideSideNav"></app-notes-list>
+      <app-note-detail></app-note-detail>
+    </div>
+  </div>
+</div>

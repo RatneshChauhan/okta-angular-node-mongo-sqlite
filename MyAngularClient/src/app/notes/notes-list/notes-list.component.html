@@ -1,0 +1,12 @@
+<div class="list-container">
+  <button 
+    class="add-new-note-btn" 
+    *ngIf="searchedNotes().length === 0" 
+    (click)="addNoteHandler()">No notes available!
+  </button>
+  <app-note
+    (noteClicked)="noteClickHandler(note)"
+    [note]="note" 
+    *ngFor="let note of searchedNotes()">
+  </app-note>
+</div>

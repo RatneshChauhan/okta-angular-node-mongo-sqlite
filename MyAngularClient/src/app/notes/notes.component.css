@@ -1,0 +1,41 @@
+.app-container{
+  text-align: left;
+  width: 98vw;
+  height: 85vh;
+  margin: auto;
+  border: 1px solid #fff;
+  box-shadow: 0 3px 3px #252323;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.main-container{
+  display: flex;
+  height: 75vh;
+}
+
+app-notes-list{
+  flex: 2;
+}
+
+app-note-detail{
+  flex: 6;
+}
+
+.displayNone{
+  display: none;
+}
+
+@media(max-width: 760px){
+  .app-container{
+      text-align: center;
+      width: 100vw;
+      height: 100vh;
+      border: 1px solid #fff;
+      box-shadow: 0 3px 3px #252323;
+      background-color: #5b5b5b;
+  }
+}
