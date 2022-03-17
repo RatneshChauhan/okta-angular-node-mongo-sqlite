@@ -14,7 +14,7 @@ export class NotesService {
   noteClickSubscription = new Subject();
   noteDetailSubscription = new Subject();
   noteSubscription = new Subject();
-  saveSubscription = new Subject<void>();
+  saveSubscription = new Subject();
   showHideSubscription = new Subject<void>();
   noteSearchSubscription = new Subject();
   disableEditingSubscription = new Subject();
@@ -56,12 +56,12 @@ export class NotesService {
     return this.request('delete', `${baseUrl}/deleteNote/${id}`, null, 'text');
   }
 
-  saveNoteHandler() {
-    this.saveSubscription.next();
+  saveNoteHandler(noteTitle: string) {
+    this.saveSubscription.next({ title: noteTitle });
   }
 
-  noteAddEditHandler() {
-    this.noteSubscription.next({ action: 'addEdit' });
+  addNoteTitleHandler(noteTitle: string) {
+    this.noteSubscription.next({ action: 'addEdit', title: noteTitle });
   }
 
   noteDeleteHandler() {

@@ -1,4 +1,4 @@
-import {FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,6 +26,8 @@ import { NoteDetailComponent } from './notes/note-detail/note-detail.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
+import { DialogModule } from './shared/dialog/dialog.module';
+
 const oktaConfig = {
   issuer: 'https://dev-94111127.okta.com/oauth2/default',
   clientId: '0oa3t914h8Cl6Y24E5d7',
@@ -48,6 +50,7 @@ const oktaConfig = {
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
     MatToolbarModule,
@@ -61,6 +64,7 @@ const oktaConfig = {
     MatProgressSpinnerModule,
     NgxEditorModule,
     OktaAuthModule,
+    DialogModule
     
   ],
   providers: [

@@ -1,0 +1,14 @@
+<div class="header">
+    <h1 mat-dialog-title>{{ data.title }}</h1>
+</div>
+<div mat-dialog-content>
+    <mat-form-field class="full-width"  *ngIf="data.type == 'Add' ">
+        <input matInput placeholder="{{ data.message }}" [formControl]="title" required >
+        <mat-error *ngIf="title.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+   
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button  style="margin-right:10px;" (click)="cancel()">{{ data.cancelText }}</button>
+    <button mat-raised-button color="primary" (click)="confirm()">{{ data.confirmText }}</button>
+</div>

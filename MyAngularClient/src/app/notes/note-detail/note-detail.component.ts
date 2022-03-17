@@ -35,8 +35,6 @@ export class NoteDetailComponent implements OnInit {
     9: 'October', 10: 'November', 11: 'December'
   }
 
-
-
   //@ts-ignore
   @ViewChild('editorTextarea', { static: true }) editorTextarea: ElementRef;
 
@@ -67,7 +65,6 @@ export class NoteDetailComponent implements OnInit {
 
     this.notesService.saveSubscription.subscribe(() => {
       console.log('htmlContent: ', this.html)
-      this.selectedNote.title = this.selectedNote.title ? this.selectedNote.title : String(this.html).replace(/<[^>]+>/gm, '') // replace html output with plain text
       this.selectedNote.description = this.html
       this.selectedNote.createdAt = this.currentDate
       this.notesService.createNote(this.selectedNote);

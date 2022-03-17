@@ -1,6 +1,6 @@
 <div class="header-container">
   <div class="icon-container">
-      <mat-icon matTooltip='Save Note' (click)="saveNoteHandler()">save</mat-icon>
+      <mat-icon matTooltip='Save Note' (click)="saveNoteDescriptionHandler()">save</mat-icon>
       <mat-icon matTooltip='Toggle Sidebar' (click)="toggleHandler()">web</mat-icon>
       <mat-icon 
         class="delete-icon"
@@ -12,7 +12,7 @@
       <mat-icon 
         [ngClass]="disableEditing? 'disable-editing': ''"
         matTooltip='Create New Note'
-        (click)="addEditNoteHandler()">edit
+        (click)="saveNoteTitleHandler()">edit
       </mat-icon>
       <mat-icon *ngIf="!disableEditing" matTooltip='Disable Editing' (click)="disableEditingHandler()">lock_open</mat-icon>
       <mat-icon *ngIf="disableEditing" matTooltip='Enable Editing' (click)="disableEditingHandler()">lock</mat-icon>
