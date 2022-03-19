@@ -20,3 +20,5 @@ Okta + Angular + Node + (MongoDB and SQLite)
 
 * npm start (Server and Client)
 * You can browse the functional app at http://localhost:4200
+
+### Note: In this app, notes are saved in mongoDB and products are saved in sqlite
